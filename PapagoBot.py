@@ -20,8 +20,11 @@ import requests
 import unicodedata
 import json
 
+#discord bot tokken
 token = ''
+#Naver Open API application ID
 client_id = ""
+#Naver Open API application token
 client_secret = ""
 
 client = discord.Client()
@@ -102,10 +105,8 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     response_body = response.read()
                     # response_body -> byte string : decode to utf-8
                     api_callResult = response_body.decode('utf-8')
-
                     # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
-                    stringConvertJSON = api_callResult.replace("'", "\"")
-                    api_callResult = json.loads(stringConvertJSON)
+                    api_callResult = json.loads(api_callResult)
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="Translate | Korean -> English", description="", color=0x5CD1E5)
@@ -116,7 +117,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("Translate complete", embed=embed)
                 else:
-                    print("Error Code : " + responsedCode)
+                    await message.channel.send("Error Code : " + responsedCode)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -136,7 +137,6 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                 # if entered value is sentence, assemble again and strip blank at both side
                 savedCombineword = combineword.strip()
                 combineword = quote(savedCombineword)
-                print(combineword)
                 # Make Query String.
                 dataParmas = "source=en&target=ko&text=" + combineword
                 # Make a Request Instance
@@ -153,8 +153,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     api_callResult = response_body.decode('utf-8')
 
                     # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
-                    stringConvertJSON = api_callResult.replace("'", "\"")
-                    api_callResult = json.loads(stringConvertJSON)
+                    api_callResult = json.loads(api_callResult)
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="Translate | English -> Korean", description="", color=0x5CD1E5)
@@ -165,7 +164,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("Translate complete", embed=embed)
                 else:
-                    print("Error Code : " + responsedCode)
+                    await message.channel.send("Error Code : " + responsedCode)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -200,8 +199,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     api_callResult = response_body.decode('utf-8')
 
                     # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
-                    stringConvertJSON = api_callResult.replace("'", "\"")
-                    api_callResult = json.loads(stringConvertJSON)
+                    api_callResult = json.loads(api_callResult)
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="Translate | Korean -> Japanese", description="", color=0x5CD1E5)
@@ -212,7 +210,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("Translate complete", embed=embed)
                 else:
-                    print("Error Code : " + responsedCode)
+                    await message.channel.send("Error Code : " + responsedCode)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -247,8 +245,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     api_callResult = response_body.decode('utf-8')
 
                     # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
-                    stringConvertJSON = api_callResult.replace("'", "\"")
-                    api_callResult = json.loads(stringConvertJSON)
+                    api_callResult = json.loads(api_callResult)
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="Translate | Japanese -> Korean", description="", color=0x5CD1E5)
@@ -259,7 +256,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("Translate complete", embed=embed)
                 else:
-                    print("Error Code : " + responsedCode)
+                    await message.channel.send("Error Code : " + responsedCode)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -296,8 +293,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     # response_body -> byte string : decode to utf-8
                     api_callResult = response_body.decode('utf-8')
                     # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
-                    stringConvertJSON = api_callResult.replace("'", "\"")
-                    api_callResult = json.loads(stringConvertJSON)
+                    api_callResult = json.loads(api_callResult)
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="Translate | Korean -> Chinese(Simplified Chinese)", description="", color=0x5CD1E5)
@@ -308,7 +304,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("Translate complete", embed=embed)
                 else:
-                    print("Error Code : " + responsedCode)
+                    await message.channel.send("Error Code : " + responsedCode)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
@@ -345,8 +341,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     # response_body -> byte string : decode to utf-8
                     api_callResult = response_body.decode('utf-8')
                     # JSON data will be printed as string type. So need to make it back to type JSON(like dictionary)
-                    stringConvertJSON = api_callResult.replace("'", "\"")
-                    api_callResult = json.loads(stringConvertJSON)
+                    api_callResult = json.loads(api_callResult)
                     # Final Result
                     translatedText = api_callResult['message']['result']["translatedText"]
                     embed = discord.Embed(title="Translate | Chinese -> Korean", description="", color=0x5CD1E5)
@@ -357,7 +352,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("Translate complete", embed=embed)
                 else:
-                    print("Error Code : " + responsedCode)
+                    await message.channel.send("Error Code : " + responsedCode)
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 client.run(token)
