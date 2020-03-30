@@ -325,7 +325,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                 combineword = quote(savedCombineword)
                 # Make Query String.
                 # Simplified Chinese
-                dataParmas = "source=ko&target=zh-CN&text=" + combineword
+                dataParmas = "source=zh-CN&target=ko&text=" + combineword
 
 
                 # Make a Request Instance
