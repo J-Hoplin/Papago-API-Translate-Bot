@@ -17,7 +17,7 @@ Discord Bot : Translation bot using papago API
  
   - 포스트 맨으로 API테스트를 해보던중 이상한 오류가 있었습니다
     
-    !img](img/2.png)
+    ![img](img/2.png)
   
   - 분명히 parameter 'source'의 값을 넣어주고 테스트를 했음에도 불구하고 오류코드 N2MT01 ( parameter 'source'가 없을때 뜨는 오류)가 계속 나오는것입니다
   
