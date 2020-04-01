@@ -43,8 +43,8 @@ async def on_message(message): # on_message() event : when the bot has recieved 
 
     '''
     #You can get id and secret key with registering in naver
-    client_id = "_Bz5w9FgQSnGqaBAgJTY"
-    client_secret = "qdKlaWCpwp"
+    client_id = ""
+    client_secret = ""
 
     #Text to translate
     entData = quote("")
