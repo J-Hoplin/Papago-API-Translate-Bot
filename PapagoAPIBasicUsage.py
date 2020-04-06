@@ -45,9 +45,6 @@ if(responsedCode==200):
     response_body = response.read()
     #response_body -> byte string : decode to utf-8
     api_callResult = response_body.decode('utf-8')
-
-    #JSON Type data will be printed. So need to make it back to type JSON(like dictionary)
-    stringConvertJSON = api_callResult.replace("'","\"")
     api_callResult = json.loads(stringConvertJSON)
     translatedText = api_callResult['message']['result']["translatedText"]
 else:
