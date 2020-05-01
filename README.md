@@ -40,8 +40,8 @@ Discord Bot : Translation bot using papago API
     
     - Korean <-> Chinese(Simplified Chinese)
   
-  - ![img](https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/91406580_1166382357038329_5127730578174509056_n.jpg?_nc_cat=100&_nc_sid=8024bb&_nc_ohc=L7ztVaRi6fYAX9LA6GD&_nc_ht=scontent-ssn1-1.xx&oh=b0d750ddd50ba5489714d276f81a8910&oe=5EA9A6A3)
-  - ![img](https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/90386514_1166382533704978_5624512651980701696_n.jpg?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=-f7wX1GdCjYAX8ka-TD&_nc_ht=scontent-ssn1-1.xx&oh=32ca4f0d3183ca8e803fa360f5691e94&oe=5EA6F162)
-  - ![img](https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/91033126_1166382857038279_7303358017288798208_n.jpg?_nc_cat=107&_nc_sid=8024bb&_nc_ohc=x3_k8-A8WRAAX8uiVWc&_nc_ht=scontent-ssn1-1.xx&oh=50dca9947b8e370f4606e3045e416d75&oe=5EA8D9FE)
+  - ![img](img/3.jpg)
+  - ![img](img/4.jpg)
+  - ![img](img/5.jpg)
   
   
