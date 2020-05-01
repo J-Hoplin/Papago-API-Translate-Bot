@@ -40,8 +40,8 @@ Discord Bot : Translation bot using papago API
     
     - Korean <-> Chinese(Simplified Chinese)
   
-  - ![img](img/3.jpg)
-  - ![img](img/4.jpg)
-  - ![img](img/5.jpg)
+  ![img](img/3.jpg)
+  ![img](img/4.jpg)
+  ![img](img/5.jpg)
   
   
