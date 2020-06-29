@@ -31,6 +31,12 @@ Discord Bot : Translation bot using papago API
    - 결론적으로 찾은 문제점은 포스트맨에서는 한글을 잘 못읽는다는 것입니다. (헤결완료)
 
 ***
+
+- 정기점검 일표
+
+ - 20200629 정기점검 완료 : 상태 : Good
+
+***
   
   - Intertranslatable language in this code
   
