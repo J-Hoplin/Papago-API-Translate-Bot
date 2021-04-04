@@ -32,9 +32,11 @@ Discord Bot : Translation bot using papago API
 
 ***
 
-- 정기점검 일표
+- Patch Note
 
  - 20200629 정기점검 완료 : 상태 : Good
+
+ - 20210404 패치 : 리팩토링 버전으로 업데이트 되었습니다.  리팩토링 전 버전은 [여기](https://github.com/J-hoplin1/Papago-API-Translate-Bot/tree/Before_Refactoring)
 
 ***
   
