@@ -28,7 +28,7 @@ DataDictionary = {
     "!한일번역" : ["ko","Korean","ja","Japanese"],
     "!일한번역" : ["ja","Japanese", "ko","Korean"],
     "!한중번역" : ["ko","Korean","zh-CN","Chinese"],
-    "!중한번역" : ["zh-CN","Korean","ko","Korean"]
+    "!중한번역" : ["zh-CN","Chinese","ko","Korean"]
 }
 
 class dataProcessStream(object):
