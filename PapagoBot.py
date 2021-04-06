@@ -12,7 +12,7 @@ from papagoRequestClass import dataProcessStream
 
 
 #discord bot tokken
-token = 'ODI1MDA4NjM4OTA0NTAwMjY0.YF3rKw.7g2uL3hztchMvDqahKFpEl0Eec0'
+token = ''
 
 
 # stream Instane
