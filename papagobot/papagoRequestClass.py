@@ -4,12 +4,6 @@ from urllib.parse import quote,quote_plus
 from urllib.request import Request,urlopen
 
 
-#Naver Open API application ID
-client_id = ""
-#Naver Open API application token
-client_secret = ""
-
-
 DataDictionary = {
     "!한영번역" : ["ko","Korean","en","English"],
     "!영한번역" : ["en", "English","ko","Korean"],
@@ -20,11 +14,13 @@ DataDictionary = {
 }
 
 class dataProcessStream(object):
-    def __init__(self):
+    def __init__(self,client_id,client_secret):
         self.baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         self.translateDict = dict()
         self.InitiateData()
-
+        self.client_id = client_id
+        self.client_secret = client_secret
+        
     def InitiateData(self) -> None:
         for y in list(DataDictionary.keys()):
             self.translateDict[y] = {
@@ -46,8 +42,8 @@ class dataProcessStream(object):
 
     def buildRequestInstane(self,Query,needTranslate,ntl,tl) -> MutableSequence:
         req = Request(self.baseurl)
-        req.add_header("X-Naver-Client-Id", client_id)
-        req.add_header("X-Naver-Client-Secret", client_secret)
+        req.add_header("X-Naver-Client-Id", self.client_id)
+        req.add_header("X-Naver-Client-Secret", self.client_secret)
         response = urlopen(req,data=Query.encode("utf-8"))
         return self.checkResponseReturnDataBox(response,needTranslate,ntl,tl)
 
