@@ -13,16 +13,17 @@ from papagoRequestClass import dataProcessStream
 with open('config.yml') as f:
     keys = yaml.load(f, Loader=yaml.FullLoader)
 
-
+###############################################################
 #discord bot tokken
 token = keys['Keys']['discordAPIToken']
 #Naver Open API application ID
 client_id = keys['Keys']['client_id']
 #Naver Open API application token
 client_secret = keys['Keys']['client_secret']
-
 # stream Instane
 streamInstance = dataProcessStream(client_id,client_secret)
+###############################################################
+
 client = discord.Client()
 @client.event # Use these decorator to register an event.
 async def on_ready(): # on_ready() event : when the bot has finised logging in and setting things up
