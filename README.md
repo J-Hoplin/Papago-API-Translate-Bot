@@ -1,4 +1,4 @@
-Chat-GPT discord command
+Papago Discord Command
 ===
 ***
 - This project is remaked with [TypeScript](https://www.typescriptlang.org) and [Discord.js](https://discord.js.org/#/)!
