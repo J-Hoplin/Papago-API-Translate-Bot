@@ -9,8 +9,8 @@ export const pingcommand: Command = {
         .setDescription("Check command's ping status!")
         .addStringOption((option): SlashCommandStringOption => {
             return option
-                .setName("ispublic")
-                .setDescription("Yes if you want to make question and response as public. Default is No")
+                .setName("private")
+                .setDescription("Yes if you want to make question and response as public. Default is Yes")
                 .setRequired(false)
                 .addChoices(
                     { name: 'Yes', value: 'Yes' },
@@ -18,7 +18,7 @@ export const pingcommand: Command = {
                 )
         }),
     run: async (client: DiscordCustomClient, interaction: CommandInteraction) => {
-        const ephemeral = interaction.options.get('ispublic')?.value === 'Yes' ? false : true
+        const ephemeral = interaction.options.get('private')?.value === 'Yes'
         await interaction.reply({
             content: `🏓 Pong! My latency status is ${client.ws.ping}ms!`,
             ephemeral
