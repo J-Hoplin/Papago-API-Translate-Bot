@@ -49,12 +49,12 @@ async def on_message(message): # on_message() event : when the bot has recieved 
     print(message.content)
     if message.author == client.user:
         return
-    if message.content.startswith("!한영번역"):
+    if message.content.startswith("!韓翻英"):
         #띄어쓰기 : split처리후 [1:]을 for문으로 붙인다.
         trsText = message.content.split(" ")
         try:
             if len(trsText) == 1:
-                await message.channel.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                await message.channel.send("並沒有輸入單字或句子，請確認後再試一次。")
             else:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
@@ -62,13 +62,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             await message.channel.send(f"Translate Failed. HTTPError Occured : {e}")
 
-    if message.content.startswith("!영한번역"):
+    if message.content.startswith("!英翻韓"):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         # 띄어쓰기 : split처리후 [1:]을 for문으로 붙인다.
         trsText = message.content.split(" ")
         try:
             if len(trsText) == 1:
-                await message.channel.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                await message.channel.send("並沒有輸入單字或句子，請確認後再試一次。")
             else:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
@@ -76,13 +76,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
-    if message.content.startswith("!한일번역"):
+    if message.content.startswith("!韓翻日"):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         # 띄어쓰기 : split처리후 [1:]을 for문으로 붙인다.
         trsText = message.content.split(" ")
         try:
             if len(trsText) == 1:
-                await message.channel.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                await message.channel.send("並沒有輸入單字或句子，請確認後再試一次。")
             else:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
@@ -90,13 +90,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
-    if message.content.startswith("!일한번역"):
+    if message.content.startswith("!日翻韓"):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         # 띄어쓰기 : split처리후 [1:]을 for문으로 붙인다.
         trsText = message.content.split(" ")
         try:
             if len(trsText) == 1:
-                await message.channel.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                await message.channel.send("並沒有輸入單字或句子，請確認後再試一次。")
             else:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
@@ -104,13 +104,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
-    if message.content.startswith("!한중번역"):
+    if message.content.startswith("!韓翻中"):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         # 띄어쓰기 : split처리후 [1:]을 for문으로 붙인다.
         trsText = message.content.split(" ")
         try:
             if len(trsText) == 1:
-                await message.channel.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                await message.channel.send("並沒有輸入單字或句子，請確認後再試一次。")
             else:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
@@ -118,13 +118,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             await message.channel.send("Translate Failed. HTTPError Occured.")
 
-    if message.content.startswith("!중한번역"):
+    if message.content.startswith("!中翻韓"):
         baseurl = "https://openapi.naver.com/v1/papago/n2mt"
         # 띄어쓰기 : split처리후 [1:]을 for문으로 붙인다.
         trsText = message.content.split(" ")
         try:
             if len(trsText) == 1:
-                await message.channel.send("단어 혹은 문장이 입력되지 않았어요. 다시한번 확인해주세요.")
+                await message.channel.send("並沒有輸入單字或句子，請確認後再試一次。")
             else:
                 resultPackage = streamInstance.returnQuery(trsText)
                 embedInstance = sendmsg(resultPackage)
